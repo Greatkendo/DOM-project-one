@@ -1,5 +1,3 @@
-let quantity = 0;
-
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
   // Get elements by their IDs
@@ -13,17 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const productCard = document.getElementById("card-body-basket");
 
   // Initialize quantity and unit price
+  let quantity = 0;
+  const unitPrice = parseInt(unitPriceElement.textContent);
 
-  document
-    .getElementById("plus-basket", "minus-basket")
-    .array.forEach((card) => {
-      const unitPrice = parseInt(unitPriceElement.textContent);
-
-      // Update total price
-      const updateTotalPrice = () => {
-        totalPriceElement.textContent = `${quantity * unitPrice} $`;
-      };
-    });
+  // Update total price
+  const updateTotalPrice = () => {
+    totalPriceElement.textContent = `${quantity * unitPrice} $`;
+  };
 
   // Increase quantity
   plusButton.addEventListener("click", () => {
@@ -67,13 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const productCard = document.getElementById("card-body-socks");
 
   // Initialize quantity and unit price
+  let quantity = 0;
+  const unitPrice = parseInt(unitPriceElement.textContent);
 
-  // const unitPrice = parseInt(unitPriceElement.textContent);
-
-  // // Update total price
-  // const updateTotalPrice = () => {
-  //   totalPriceElement.textContent = `${quantity * unitPrice} $`;
-  // };
+  // Update total price
+  const updateTotalPrice = () => {
+    totalPriceElement.textContent = `${quantity * unitPrice} $`;
+  };
 
   // Increase quantity
   plusButton.addEventListener("click", () => {
@@ -117,13 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const productCard = document.getElementById("card-body-bag");
 
   // Initialize quantity and unit price
+  let quantity = 0;
+  const unitPrice = parseInt(unitPriceElement.textContent);
 
-  // const unitPrice = parseInt(unitPriceElement.textContent);
-
-  // // Update total price
-  // const updateTotalPrice = () => {
-  //   totalPriceElement.textContent = `${quantity * unitPrice} $`;
-  // };
+  // Update total price
+  const updateTotalPrice = () => {
+    totalPriceElement.textContent = `${quantity * unitPrice} $`;
+  };
 
   // Increase quantity
   plusButton.addEventListener("click", () => {
