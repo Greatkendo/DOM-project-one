@@ -1,7 +1,7 @@
+const totalPriceElement = document.getElementById("total");
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
   // Get elements by their IDs
-  const totalPriceElement = document.getElementById("total");
   const unitPriceElement = document.getElementById("unit-price-basket");
   const quantityElement = document.getElementById("quantity-basket");
   const plusButton = document.getElementById("plus-basket");
@@ -14,16 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let quantity = 0;
   const unitPrice = parseInt(unitPriceElement.textContent);
 
-  // Update total price
-  const updateTotalPrice = () => {
-    totalPriceElement.textContent = `${quantity * unitPrice} $`;
-  };
-
   // Increase quantity
   plusButton.addEventListener("click", () => {
     quantity += 1;
     quantityElement.textContent = quantity;
-    updateTotalPrice();
+    totalPriceElement.textContent =
+      parseInt(totalPriceElement.textContent) + unitPrice;
   });
 
   // Decrease quantity
@@ -31,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (quantity > 0) {
       quantity -= 1;
       quantityElement.textContent = quantity;
-      updateTotalPrice();
+      totalPriceElement.textContent =
+        parseInt(totalPriceElement.textContent) - unitPrice;
     }
   });
 
@@ -51,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
   // Get elements by their IDs
-  const totalPriceElement = document.getElementById("total");
+
   const unitPriceElement = document.getElementById("unit-price-socks");
   const quantityElement = document.getElementById("quantity-socks");
   const plusButton = document.getElementById("plus-socks");
@@ -64,16 +61,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let quantity = 0;
   const unitPrice = parseInt(unitPriceElement.textContent);
 
-  // Update total price
-  const updateTotalPrice = () => {
-    totalPriceElement.textContent = `${quantity * unitPrice} $`;
-  };
-
   // Increase quantity
   plusButton.addEventListener("click", () => {
     quantity += 1;
     quantityElement.textContent = quantity;
-    updateTotalPrice();
+    totalPriceElement.textContent =
+      parseInt(totalPriceElement.textContent) + unitPrice;
   });
 
   // Decrease quantity
@@ -81,7 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (quantity > 0) {
       quantity -= 1;
       quantityElement.textContent = quantity;
-      updateTotalPrice();
+      totalPriceElement.textContent =
+        parseInt(totalPriceElement.textContent) - unitPrice;
     }
   });
 
@@ -101,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", () => {
   // Get elements by their IDs
-  const totalPriceElement = document.getElementById("total");
   const unitPriceElement = document.getElementById("unit-price-bag");
   const quantityElement = document.getElementById("quantity-bag");
   const plusButton = document.getElementById("plus-bag");
@@ -123,7 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
   plusButton.addEventListener("click", () => {
     quantity += 1;
     quantityElement.textContent = quantity;
-    updateTotalPrice();
+    totalPriceElement.textContent =
+      parseInt(totalPriceElement.textContent) + unitPrice;
   });
 
   // Decrease quantity
@@ -131,7 +125,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (quantity > 0) {
       quantity -= 1;
       quantityElement.textContent = quantity;
-      updateTotalPrice();
+      totalPriceElement.textContent =
+        parseInt(totalPriceElement.textContent) - unitPrice;
     }
   });
 
